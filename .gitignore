@@ -1,0 +1,27 @@
+# Ignorer les fichiers compressés
+*.gz
+
+# Ignorer les fichiers universitaires
+*.uni
+
+# Ignorer les fichiers de sauvegarde
+*.vdb
+
+# Ignorer les fichiers vidéo
+*.mkv
+*.mp4
+
+# Ignorer les fichiers MP4 de taille spécifique
+*.mp4[5-9][0-9].[0-9][0-9]MB
+
+# Ignorer les fichiers MP de taille spécifique
+*.mp[5-9][0-9].[0-9][0-9]MB
+*.mp[5-9][0-9][0-9].[0-9][0-9]MB
+*.mp[5-9][0-9][0-9][0-9].[0-9][0-9]MB
+
+# Ignorer les fichiers .blend de plus de 50.00 MB
+*.blend[5-9][0-9].[0-9][0-9]MB
+.blend1[5-9][0-9].[0-9][0-9]MB
+
+# Ignorer les fichiers .fbx de plus de 50.00 MB
+*.fbx[5-9][0-9].[0-9][0-9]MB
