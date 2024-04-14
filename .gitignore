@@ -25,3 +25,6 @@
 
 # Ignorer les fichiers .fbx de plus de 50.00 MB
 *.fbx[5-9][0-9].[0-9][0-9]MB
+
+# Ignore les fichiers trop gros
+Efrei3d
