@@ -22,6 +22,13 @@ def create_specific_folders(start_path):
         if os.path.isdir(os.path.join(start_path, name)):
             for folder in ['ref', 'render', 'assets']:
                 os.makedirs(os.path.join(start_path, name, folder), exist_ok=True)
+            # cree un fichiers Task.md sans ecraser se qu'il y a dedans
+            if not os.path.exists(os.path.join(start_path, name, 'Task.md')):
+                with open(os.path.join(start_path, name, 'Task.md'), 'w') as f:
+                    f.write(f"# {name} \n\n## Description\n\n## Objectifs\n\n ## Taches")
+            else:
+                with open(os.path.join(start_path, name, 'Task.md'), 'a') as f:
+                    pass
 
 def delete_empty_folders(start_path):
     for root, dirs, files in os.walk(start_path, topdown=False):
@@ -59,6 +66,7 @@ def write_README(start_path):
                         new_content += f"    - ![image]({name}/ref/{img})\n"
                         
             new_content += f"  - #### [Rendu](./{name}/render/)\n"
+            image_rendu = []
             if os.path.join(start_path, name) in rendu:
                 print('Rendu :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'render')):
