@@ -2,6 +2,13 @@
 
 ## Description
 
+reconstruire la salle de bain de la maison de BLR
+
 ## Objectifs
 
- ## Taches
+prendre les mesure et pouvoir se balader dans la maison en VR
+
+FINSIH
+
+## Taches
+

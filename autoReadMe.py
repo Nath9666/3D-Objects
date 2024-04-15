@@ -56,22 +56,24 @@ def write_README(start_path):
             new_content += f"\n ### {name} : \n"
             new_content += f"\n- [{name}](./{name}/Task.md) : \n"
 
-            new_content += f"  - #### [Assets](./{name}/assets/)\n"
+            new_content += f"  - [Assets](./{name}/assets/)\n"
 
-            new_content += f"  - #### [References](./{name}/ref/)\n"
+            new_content += f"  - [References](./{name}/ref/)\n"
             if os.path.join(start_path, name) in ref:
                 print('Ref :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'ref')):
                     if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
                         new_content += f"    - ![image]({name}/ref/{img})\n"
                         
-            new_content += f"  - #### [Rendu](./{name}/render/)\n"
+            new_content += f"  - [Rendu](./{name}/render/)\n"
             image_rendu = []
+            image_count = 0
             if os.path.join(start_path, name) in rendu:
                 print('Rendu :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'render')):
-                    if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
+                    if (img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg')) and image_count < 10:
                         new_content += f"    - ![image]({name}/render/{img})\n"
+                        image_count += 1
 
                         
 

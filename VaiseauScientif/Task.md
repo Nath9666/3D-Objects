@@ -2,6 +2,17 @@
 
 ## Description
 
+s'inspirer de la photo pour faire l'image a ma maniere
+
 ## Objectifs
 
- ## Taches
+faire une scene completes
+
+TODO : faire la scene
+
+## Taches
+
+- [ ] table contenoir
+- [ ] chaise
+- [ ] ordinateur
+- [ ] background
