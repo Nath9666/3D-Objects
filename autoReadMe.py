@@ -1,6 +1,20 @@
 import os
 
-def find_specific_folders(start_path):
+def find_specific_folders(start_path)-> tuple:
+    """
+    Find specific folders in the given start_path directory.
+
+    Args:
+        start_path (str): The directory path to start the search from.
+
+    Returns:
+        tuple: A tuple containing the lists of found folders and the total number of files in the start_path directory.
+            The tuple contains the following elements:
+            - rendu (list): A list of paths to folders named 'render' that are not empty.
+            - ref (list): A list of paths to folders named 'ref' that are not empty.
+            - assets (list): A list of paths to folders named 'assets' that are not empty.
+            - nombre (int): The total number of files in the start_path directory.
+    """
     rendu = []
     ref = []
     assets = []
@@ -18,11 +32,20 @@ def find_specific_folders(start_path):
     return rendu, ref, assets, nombre
 
 def create_specific_folders(start_path):
+    """
+    Create specific folders and a Task.md file in each subdirectory of the given start_path.
+
+    Args:
+        start_path (str): The path of the directory where the subdirectories are located.
+
+    Returns:
+        None
+    """
     for name in os.listdir(start_path):
         if os.path.isdir(os.path.join(start_path, name)):
             for folder in ['ref', 'render', 'assets']:
                 os.makedirs(os.path.join(start_path, name, folder), exist_ok=True)
-            # cree un fichiers Task.md sans ecraser se qu'il y a dedans
+            # create a Task.md file without overwriting its contents
             if not os.path.exists(os.path.join(start_path, name, 'Task.md')):
                 with open(os.path.join(start_path, name, 'Task.md'), 'w') as f:
                     f.write(f"# {name} \n\n## Description\n\n## Objectifs\n\n ## Taches")
@@ -31,11 +54,29 @@ def create_specific_folders(start_path):
                     pass
 
 def delete_empty_folders(start_path):
+    """
+    Deletes empty folders recursively starting from the given start_path.
+
+    Args:
+        start_path (str): The path of the directory to start deleting empty folders from.
+
+    Returns:
+        None
+    """
     for root, dirs, files in os.walk(start_path, topdown=False):
         if not dirs and not files:
             os.rmdir(root)
 
-def empty_folder(start_path)-> bool:
+def empty_folder(start_path) -> bool:
+    """
+    Check if a folder is empty.
+
+    Args:
+        start_path (str): The path of the folder to check.
+
+    Returns:
+        bool: True if the folder is empty, False otherwise.
+    """
     for root, dirs, files in os.walk(start_path):
         if not dirs and not files:
             return True
@@ -43,6 +84,15 @@ def empty_folder(start_path)-> bool:
 
 
 def write_README(start_path):
+    """
+    Updates the content of the README.md file located in the specified start_path directory.
+
+    Args:
+        start_path (str): The path to the directory containing the README.md file.
+
+    Returns:
+        None
+    """
     with open(os.path.join(start_path, 'README.md'), 'r') as f:
         content = f.read()
 
@@ -81,7 +131,6 @@ def write_README(start_path):
 
     with open(os.path.join(start_path, 'README.md'), 'w') as f:
         f.write(new_content)
-
 
 rendu, ref, assets, nombre = find_specific_folders('./')
 print('Nombre de dossiers parcourus :', nombre)
