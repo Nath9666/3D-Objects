@@ -1,4 +1,6 @@
-# BarbieScene 
+# BarbieScene
+
+Etat : `In progress`
 
 ## Description
 
@@ -11,8 +13,8 @@ Reprendre l'image et la refaire en image avec une musique
 ## Taches
 
 - [ ] faire les 2 personngaes
-    - [ ]  leurs vetements
-    - [ ] leurs cheveux
+  - [ ] leurs vetements
+  - [ ] leurs cheveux
 - [ ] shader
 - [ ] musique
 - [ ] camera

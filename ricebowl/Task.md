@@ -1,4 +1,6 @@
-# ricebowl 
+# ricebowl
+
+Etat : `In progress`
 
 ## Description
 
@@ -6,7 +8,7 @@ Faire un bol de riz
 
 ## Objectifs
 
-s'entrainer sur la modelisation de nourriture réaliste 
+s'entrainer sur la modelisation de nourriture réaliste
 
 TODO : terminer le projet
 

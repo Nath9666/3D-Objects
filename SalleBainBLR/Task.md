@@ -1,4 +1,6 @@
-# SalleBainBLR 
+# SalleBainBLR
+
+Etat : `Finish`
 
 ## Description
 
@@ -11,4 +13,3 @@ prendre les mesure et pouvoir se balader dans la maison en VR
 FINSIH
 
 ## Taches
-

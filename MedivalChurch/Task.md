@@ -1,4 +1,6 @@
-# MedivalChurch 
+# MedivalChurch
+
+Etat : `In progress`
 
 ## Description
 
@@ -13,8 +15,8 @@ TODO : Continuer le projet
 ## Taches
 
 - [ ] modeliser l'eglise
-    - [ ] modeliser les vitraux
-    - [ ] modeliser les gargouilles
+  - [ ] modeliser les vitraux
+  - [ ] modeliser les gargouilles
 - [ ] texturer l'eglise
 - [ ] eclairage
 - [ ] post production

@@ -1,4 +1,6 @@
-# HeadRobot 
+# HeadRobot
+
+Etat : `In progress`
 
 ## Description
 
@@ -11,11 +13,11 @@ Avec les contraites de la tete
 
 TODO : Faire le projet
 
- ## Taches
+## Taches
 
 - [ ] modeliser la tete
-    - [X] modeliser les cables
-    - [ ] modeliser les vis
+  - [X] modeliser les cables
+  - [ ] modeliser les vis
 - [ ] texturer la tete
 - [ ] animer la tete
 - [ ] eclairage

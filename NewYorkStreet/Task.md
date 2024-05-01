@@ -1,4 +1,6 @@
-# NewYorkStreet 
+# NewYorkStreet
+
+Etat : `In progress`
 
 ## Description
 
@@ -14,8 +16,8 @@ TODO : Continuer le projet
 ## Taches
 
 - [ ] modeliser les batiments
-    - [ ] modeliser les fenetres
-    - [ ] modeliser les portes
+  - [ ] modeliser les fenetres
+  - [ ] modeliser les portes
 - [ ] texturer les batiments
 - [ ] eclairage
 - [ ] pluie

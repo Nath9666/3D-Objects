@@ -8,15 +8,17 @@ Chaque dossier contient un fichier `.blend` qui est le fichier source de l'objet
 Il contient :
 
 - `model.blend` le fichier sources de l'objets
-- `ref` des reférences utilisée
+- un dossier `ref` contenant des reférences utilisées
 - un dossier `render` contenant les différents rendu fait que cela soit des videos ou des images
 - un dossier `assets`contenant les textures et les images utilisées
 - un fichier `Task.md` qui contient les taches a faire pour le projet
 
+Ansi que un modèle de tache [TaskTemplate](./TaskTemplate.md) qui contient la structure des taches a faire pour chaque projet.
+
 ## Utilisation
 
 Pour utiliser ces objets 3D, clonez ce dépôt et importez les fichiers `.fbx` dans votre logiciel 3D préféré.
-Ou meme vous pouvez utilisez les .blend avec blender.
+Ou meme vous pouvez utilisez les .blend avec [Blender](https://www.blender.org/)
 
 ## Contribution
 
@@ -27,21 +29,21 @@ Si vous souhaitez contribuer à ce dépôt, n'hésitez pas à faire un pull requ
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## Les projets et leur avancement
- ### .git : 
+ ### .git : Default
 
 - [.git](./.git/Task.md) : 
   - [Assets](./.git/assets/)
   - [References](./.git/ref/)
   - [Rendu](./.git/render/)
 
- ### 3D_Builder : 
+ ### 3D_Builder : `Finish`
 
 - [3D_Builder](./3D_Builder/Task.md) : 
   - [Assets](./3D_Builder/assets/)
   - [References](./3D_Builder/ref/)
   - [Rendu](./3D_Builder/render/)
 
- ### AnimationAssoTeck : 
+ ### AnimationAssoTeck : `Start`
 
 - [AnimationAssoTeck](./AnimationAssoTeck/Task.md) : 
   - [Assets](./AnimationAssoTeck/assets/)
@@ -49,14 +51,14 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](AnimationAssoTeck/ref/ArkLogo.jpeg)
   - [Rendu](./AnimationAssoTeck/render/)
 
- ### Assets : 
+ ### Assets : Default
 
 - [Assets](./Assets/Task.md) : 
   - [Assets](./Assets/assets/)
   - [References](./Assets/ref/)
   - [Rendu](./Assets/render/)
 
- ### BaniereEfrei3D : 
+ ### BaniereEfrei3D : `Finish`
 
 - [BaniereEfrei3D](./BaniereEfrei3D/Task.md) : 
   - [Assets](./BaniereEfrei3D/assets/)
@@ -67,7 +69,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](BaniereEfrei3D/render/baniere_efrei_3D_4.png)
     - ![image](BaniereEfrei3D/render/baniere_efrei_3D_logo.png)
 
- ### BarbieScene : 
+ ### BarbieScene : `In progress`
 
 - [BarbieScene](./BarbieScene/Task.md) : 
   - [Assets](./BarbieScene/assets/)
@@ -76,7 +78,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./BarbieScene/render/)
     - ![image](BarbieScene/render/untitled.png)
 
- ### BleuBague : 
+ ### BleuBague : `Finish`
 
 - [BleuBague](./BleuBague/Task.md) : 
   - [Assets](./BleuBague/assets/)
@@ -86,7 +88,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](BleuBague/render/img1.png)
     - ![image](BleuBague/render/img2.png)
 
- ### BreakClock : 
+ ### BreakClock : `In progress`
 
 - [BreakClock](./BreakClock/Task.md) : 
   - [Assets](./BreakClock/assets/)
@@ -95,7 +97,14 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./BreakClock/render/)
     - ![image](BreakClock/render/untitled.png)
 
- ### ColierPierre : 
+ ### cache_fluid_4b85f272 : Default
+
+- [cache_fluid_4b85f272](./cache_fluid_4b85f272/Task.md) : 
+  - [Assets](./cache_fluid_4b85f272/assets/)
+  - [References](./cache_fluid_4b85f272/ref/)
+  - [Rendu](./cache_fluid_4b85f272/render/)
+
+ ### ColierPierre : `In progress`
 
 - [ColierPierre](./ColierPierre/Task.md) : 
   - [Assets](./ColierPierre/assets/)
@@ -104,7 +113,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./ColierPierre/render/)
     - ![image](ColierPierre/render/untitled.png)
 
- ### CollierAnge : 
+ ### CollierAnge : `Finish`
 
 - [CollierAnge](./CollierAnge/Task.md) : 
   - [Assets](./CollierAnge/assets/)
@@ -112,7 +121,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./CollierAnge/render/)
     - ![image](CollierAnge/render/untitled.png)
 
- ### Crane : 
+ ### Crane : `Finish`
 
 - [Crane](./Crane/Task.md) : 
   - [Assets](./Crane/assets/)
@@ -120,7 +129,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./Crane/render/)
     - ![image](Crane/render/untitled.png)
 
- ### DebarquementNormandieJeu : 
+ ### DebarquementNormandieJeu : `In progress`
 
 - [DebarquementNormandieJeu](./DebarquementNormandieJeu/Task.md) : 
   - [Assets](./DebarquementNormandieJeu/assets/)
@@ -128,7 +137,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./DebarquementNormandieJeu/render/)
     - ![image](DebarquementNormandieJeu/render/untitled.png)
 
- ### dinosaures : 
+ ### dinosaures : `Finish`
 
 - [dinosaures](./dinosaures/Task.md) : 
   - [Assets](./dinosaures/assets/)
@@ -145,7 +154,15 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](dinosaures/render/0009.png)
     - ![image](dinosaures/render/0010.png)
 
- ### Forest : 
+ ### Efrei3d : `Finish`
+
+- [Efrei3d](./Efrei3d/Task.md) : 
+  - [Assets](./Efrei3d/assets/)
+  - [References](./Efrei3d/ref/)
+  - [Rendu](./Efrei3d/render/)
+    - ![image](Efrei3d/render/untitled.png)
+
+ ### Forest : `In progress`
 
 - [Forest](./Forest/Task.md) : 
   - [Assets](./Forest/assets/)
@@ -155,7 +172,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](Forest/render/untitled.png)
     - ![image](Forest/render/untitled2.png)
 
- ### HeadRobot : 
+ ### HeadRobot : `In progress`
 
 - [HeadRobot](./HeadRobot/Task.md) : 
   - [Assets](./HeadRobot/assets/)
@@ -163,7 +180,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./HeadRobot/render/)
     - ![image](HeadRobot/render/untitled.png)
 
- ### HeartAnimation : 
+ ### HeartAnimation : `Start`
 
 - [HeartAnimation](./HeartAnimation/Task.md) : 
   - [Assets](./HeartAnimation/assets/)
@@ -172,7 +189,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](HeartAnimation/ref/7b662a46c8be94a6ba6597fa1504d505.jpg)
   - [Rendu](./HeartAnimation/render/)
 
- ### HoldingTree : 
+ ### HoldingTree : `Finish`
 
 - [HoldingTree](./HoldingTree/Task.md) : 
   - [Assets](./HoldingTree/assets/)
@@ -180,14 +197,14 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./HoldingTree/render/)
     - ![image](HoldingTree/render/untitled.png)
 
- ### IRV : 
+ ### IRV : `Finish`
 
 - [IRV](./IRV/Task.md) : 
   - [Assets](./IRV/assets/)
   - [References](./IRV/ref/)
   - [Rendu](./IRV/render/)
 
- ### LandScape : 
+ ### LandScape : `Finish`
 
 - [LandScape](./LandScape/Task.md) : 
   - [Assets](./LandScape/assets/)
@@ -196,7 +213,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](LandScape/render/Landscape_2.png)
     - ![image](LandScape/render/untitled.png)
 
- ### MarcheurDespace : 
+ ### MarcheurDespace : `In progress`
 
 - [MarcheurDespace](./MarcheurDespace/Task.md) : 
   - [Assets](./MarcheurDespace/assets/)
@@ -207,7 +224,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./MarcheurDespace/render/)
     - ![image](MarcheurDespace/render/untitled.png)
 
- ### Matrix : 
+ ### Matrix : `Finish`
 
 - [Matrix](./Matrix/Task.md) : 
   - [Assets](./Matrix/assets/)
@@ -215,7 +232,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./Matrix/render/)
     - ![image](Matrix/render/background.png)
 
- ### MedivalChurch : 
+ ### MedivalChurch : `In progress`
 
 - [MedivalChurch](./MedivalChurch/Task.md) : 
   - [Assets](./MedivalChurch/assets/)
@@ -223,7 +240,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./MedivalChurch/render/)
     - ![image](MedivalChurch/render/untitled.png)
 
- ### NewYorkStreet : 
+ ### NewYorkStreet : `In progress`
 
 - [NewYorkStreet](./NewYorkStreet/Task.md) : 
   - [Assets](./NewYorkStreet/assets/)
@@ -233,7 +250,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./NewYorkStreet/render/)
     - ![image](NewYorkStreet/render/untitled.png)
 
- ### PainSentence : 
+ ### PainSentence : `Finish`
 
 - [PainSentence](./PainSentence/Task.md) : 
   - [Assets](./PainSentence/assets/)
@@ -241,7 +258,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./PainSentence/render/)
     - ![image](PainSentence/render/untitled.png)
 
- ### PendentifEpee : 
+ ### PendentifEpee : `Finish`
 
 - [PendentifEpee](./PendentifEpee/Task.md) : 
   - [Assets](./PendentifEpee/assets/)
@@ -250,7 +267,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./PendentifEpee/render/)
     - ![image](PendentifEpee/render/untitled.png)
 
- ### Poker : 
+ ### Poker : `Finish`
 
 - [Poker](./Poker/Task.md) : 
   - [Assets](./Poker/assets/)
@@ -258,7 +275,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./Poker/render/)
     - ![image](Poker/render/untitled.png)
 
- ### PontonOcean : 
+ ### PontonOcean : `Finish`
 
 - [PontonOcean](./PontonOcean/Task.md) : 
   - [Assets](./PontonOcean/assets/)
@@ -266,7 +283,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./PontonOcean/render/)
     - ![image](PontonOcean/render/untitled.png)
 
- ### Relique_de_la_mort : 
+ ### Relique_de_la_mort : `In progress`
 
 - [Relique_de_la_mort](./Relique_de_la_mort/Task.md) : 
   - [Assets](./Relique_de_la_mort/assets/)
@@ -275,7 +292,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./Relique_de_la_mort/render/)
     - ![image](Relique_de_la_mort/render/untitled.png)
 
- ### ricebowl : 
+ ### ricebowl : `In progress`
 
 - [ricebowl](./ricebowl/Task.md) : 
   - [Assets](./ricebowl/assets/)
@@ -283,7 +300,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./ricebowl/render/)
     - ![image](ricebowl/render/untitled.png)
 
- ### SalleBainBLR : 
+ ### SalleBainBLR : `Finish`
 
 - [SalleBainBLR](./SalleBainBLR/Task.md) : 
   - [Assets](./SalleBainBLR/assets/)
@@ -291,14 +308,14 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./SalleBainBLR/render/)
     - ![image](SalleBainBLR/render/render.png)
 
- ### Telecharger : 
+ ### Telecharger : Default
 
 - [Telecharger](./Telecharger/Task.md) : 
   - [Assets](./Telecharger/assets/)
   - [References](./Telecharger/ref/)
   - [Rendu](./Telecharger/render/)
 
- ### VaiseauScientif : 
+ ### VaiseauScientif : `In progress`
 
 - [VaiseauScientif](./VaiseauScientif/Task.md) : 
   - [Assets](./VaiseauScientif/assets/)
@@ -307,21 +324,14 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
   - [Rendu](./VaiseauScientif/render/)
     - ![image](VaiseauScientif/render/untitled.png)
 
- ### vda : 
+ ### vda : `Abandon`
 
 - [vda](./vda/Task.md) : 
   - [Assets](./vda/assets/)
   - [References](./vda/ref/)
   - [Rendu](./vda/render/)
 
- ### Video : 
-
-- [Video](./Video/Task.md) : 
-  - [Assets](./Video/assets/)
-  - [References](./Video/ref/)
-  - [Rendu](./Video/render/)
-
- ### VideoInsta : 
+ ### VideoInsta : `Finish`
 
 - [VideoInsta](./VideoInsta/Task.md) : 
   - [Assets](./VideoInsta/assets/)
@@ -330,7 +340,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](VideoInsta/render/untitled.png)
     - ![image](VideoInsta/render/untitled2.png)
 
- ### YodaSpeach : 
+ ### YodaSpeach : `In progress`
 
 - [YodaSpeach](./YodaSpeach/Task.md) : 
   - [Assets](./YodaSpeach/assets/)

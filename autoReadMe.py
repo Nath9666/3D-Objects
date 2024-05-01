@@ -82,8 +82,30 @@ def empty_folder(start_path) -> bool:
             return True
     return False
 
+def find_step_project(start_path)-> dict:
+    """
+    Find the step of each project in the given start_path directory.
 
-def write_README(start_path):
+    Args:
+        start_path (str): The directory path to start the search from.
+
+    Returns:
+        dict: A dictionary containing the step of each project.
+    """
+    step_project = {}
+    for root, dirs, files in os.walk(start_path):
+        for file in files:
+            if file == 'Task.md':
+                with open(os.path.join(root, file), 'r') as f:
+                    content = f.readlines()
+                    step = content[2].strip()
+                    if step.startswith('Etat :'):
+                        step = step[len('Etat :'):].strip()
+                        step_project[os.path.basename(root)] = step
+    return step_project
+    
+
+def write_README(start_path: str, step_project: dict):
     """
     Updates the content of the README.md file located in the specified start_path directory.
 
@@ -103,7 +125,11 @@ def write_README(start_path):
 
     for name in os.listdir(start_path):
         if os.path.isdir(os.path.join(start_path, name)):
-            new_content += f"\n ### {name} : \n"
+            try:
+                step_project[name]
+            except KeyError:
+                step_project[name] = 'Default'
+            new_content += f"\n ### {name} : {step_project[name]}\n"
             new_content += f"\n- [{name}](./{name}/Task.md) : \n"
 
             new_content += f"  - [Assets](./{name}/assets/)\n"
@@ -142,6 +168,6 @@ for i in assets:
     print('Dossier assets :', i)
 
 create_specific_folders('./')
-write_README('./')
+write_README('./', find_step_project('./'))
 #delete_empty_folders('./')
 

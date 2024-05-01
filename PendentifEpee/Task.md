@@ -1,5 +1,7 @@
 # PendentifEpee
 
+Etat : `Finish`
+
 [Blender Procedural Material Tutorials - YouTube](https://www.youtube.com/playlist?list=PLsGl9GczcgBs6TtApKKK-L_0Nm6fovNPk)
 
 [Blender Tutorial - PBR Lava Shader in Blender 2.8x (youtube.com)](https://www.youtube.com/playlist?list=PLBDjPfdrvlnkcWdLNlqHffzMkrfkCXjb4)

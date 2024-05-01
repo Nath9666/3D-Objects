@@ -1,4 +1,6 @@
-# BleuBague 
+# BleuBague
+
+Etat : `Finish`
 
 ## Description
 
@@ -10,4 +12,4 @@ Travailler les shader et le texture pain
 
 FINSIH
 
- ## Taches
+## Taches

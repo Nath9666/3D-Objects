@@ -1,4 +1,6 @@
-# MarcheurDespace 
+# MarcheurDespace
+
+Etat : `In progress`
 
 ## Description
 
@@ -13,8 +15,8 @@ TODO : Continuer le projet
 ## Taches
 
 - [ ] modeliser le vaisseau spatial
-    - [ ] modeliser les cables
-    - [ ] modeliser les vis
+  - [ ] modeliser les cables
+  - [ ] modeliser les vis
 - [ ] modeliser le marcheur de l'espace
 - [ ] texturer le vaisseau spatial
 - [ ] texturer le marcheur de l'espace

@@ -1,4 +1,6 @@
-# HeartAnimation 
+# HeartAnimation
+
+Etat : `Start`
 
 ## Description
 
@@ -13,7 +15,7 @@ START
 ## Taches
 
 - [ ] modeliser le coeur
-    - [ ] modeliser les veines
-    - [ ] modeliser les artères
+  - [ ] modeliser les veines
+  - [ ] modeliser les artères
 - [ ] texturer le coeur
 - [ ] animer le coeur

@@ -1,4 +1,6 @@
-# DebarquementNormandieJeu 
+# DebarquementNormandieJeu
+
+Etat : `In progress`
 
 ## Description
 
@@ -13,8 +15,8 @@ TODO : Faire le projet
 ## Taches
 
 - [ ] creer le terrain
-    - [ ] creer les textures
-    - [ ] creer les arbres
+  - [ ] creer les textures
+  - [ ] creer les arbres
 - [ ] creer les soldats
 - [ ] creer les vehicules
 - [ ] creer les batiments

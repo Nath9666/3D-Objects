@@ -1,5 +1,7 @@
 # Poker
 
+Etat : `Finish`
+
 ## Description
 
 Faire le logo de Efrei Poker en 3D sous forme de jeton
