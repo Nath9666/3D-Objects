@@ -14,4 +14,4 @@ afin de ... (pourquoi faire le projet)
 ## Taches
 
 - [ ] tache 1
-- [x] tache 2 terminé
+- [X] tache 2 terminé
