@@ -331,6 +331,7 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
     - ![image](SOGETRONIC_FULGURO-BEAM/ref/zoomLoad8.png)
     - ![image](SOGETRONIC_FULGURO-BEAM/ref/zoomLoad9.png)
   - [Rendu](./SOGETRONIC_FULGURO-BEAM/render/)
+    - ![image](SOGETRONIC_FULGURO-BEAM/render/render.png)
 
  ### Telecharger : Default
 
