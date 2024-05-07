@@ -80,17 +80,17 @@ def write_README(start_path):
     with open(os.path.join(start_path, 'README.md'), 'w') as f:
         f.write(new_content)
 
+if __name__ == "__main__":
+    rendu, ref, assets, nombre = find_specific_folders('./')
+    print('Nombre de dossiers parcourus :', nombre)
+    for i in rendu:
+        print('Dossier rendu :', i)
+    for i in ref:
+        print('Dossier ref :', i)
+    for i in assets:
+        print('Dossier assets :', i)
 
-rendu, ref, assets, nombre = find_specific_folders('./')
-print('Nombre de dossiers parcourus :', nombre)
-for i in rendu:
-    print('Dossier rendu :', i)
-for i in ref:
-    print('Dossier ref :', i)
-for i in assets:
-    print('Dossier assets :', i)
-
-create_specific_folders('./')
-write_README('./')
-#delete_empty_folders('./')
+    create_specific_folders('./')
+    write_README('./')
+    #delete_empty_folders('./')
 

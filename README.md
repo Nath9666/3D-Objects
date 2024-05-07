@@ -75,6 +75,20 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
     - ![image](BarbieScene/ref/scene.png)
   - #### [Rendu](./BarbieScene/render/)
 
+ ### BatimentCartoon : 
+
+- [BatimentCartoon](./BatimentCartoon/Task.md) : 
+  - #### [Assets](./BatimentCartoon/assets/)
+  - #### [References](./BatimentCartoon/ref/)
+  - #### [Rendu](./BatimentCartoon/render/)
+
+ ### BlenderFiles : 
+
+- [BlenderFiles](./BlenderFiles/Task.md) : 
+  - #### [Assets](./BlenderFiles/assets/)
+  - #### [References](./BlenderFiles/ref/)
+  - #### [Rendu](./BlenderFiles/render/)
+
  ### BleuBague : 
 
 - [BleuBague](./BleuBague/Task.md) : 
