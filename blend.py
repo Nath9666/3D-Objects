@@ -3,7 +3,7 @@ import json
 from datetime import datetime
 
 # Define the directory to search (excluding the current directory)
-search_directory = 'C://'
+search_directory = 'G://'
 exception = "C://Users\\Nathan\\3D Objects"
 
 print('Searching for .blend files in the directory:', search_directory)
@@ -20,6 +20,7 @@ for root, dirs, files in os.walk(search_directory):
                 file_path = os.path.join(root, file)
                 creation_date = datetime.fromtimestamp(os.path.getctime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
                 modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
+                print(len(file_details)+1)
                 file_details.append({
                     'file_name': file,
                     'file_path': file_path,
@@ -30,6 +31,6 @@ for root, dirs, files in os.walk(search_directory):
 print("Ecriture des details des "+ str(len(file_details)) + " fichiers dans un fichier JSON...")
 
 # Save file details to a JSON file
-json_file = './output.json'
+json_file = './output/output'+search_directory.replace("://","")+'.json'
 with open(json_file, 'w') as f:
     json.dump(file_details, f, indent=4)
