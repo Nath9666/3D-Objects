@@ -136,7 +136,7 @@ def write_README(start_path: str, step_project: dict):
 
             new_content += f"  - [References](./{name}/ref/)\n"
             if os.path.join(start_path, name) in ref:
-                print('Ref :', name)
+                #? print('Ref :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'ref')):
                     if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
                         new_content += f"    - ![image]({name}/ref/{img})\n"
@@ -145,7 +145,7 @@ def write_README(start_path: str, step_project: dict):
             image_rendu = []
             image_count = 0
             if os.path.join(start_path, name) in rendu:
-                print('Rendu :', name)
+                #? print('Rendu :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'render')):
                     if (img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg')) and image_count < 10:
                         new_content += f"    - ![image]({name}/render/{img})\n"
@@ -160,12 +160,6 @@ def write_README(start_path: str, step_project: dict):
 
 rendu, ref, assets, nombre = find_specific_folders('./')
 print('Nombre de dossiers parcourus :', nombre)
-for i in rendu:
-    print('Dossier rendu :', i)
-for i in ref:
-    print('Dossier ref :', i)
-for i in assets:
-    print('Dossier assets :', i)
 
 create_specific_folders('./')
 write_README('./', find_step_project('./'))

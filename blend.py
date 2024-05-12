@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Define the directory to search (excluding the current directory)
 search_directory = 'C://'
-exeption = './'
+exception = "C://Users\\Nathan\\3D Objects"
 
 print('Searching for .blend files in the directory:', search_directory)
 
@@ -16,11 +16,10 @@ for root, dirs, files in os.walk(search_directory):
     # Exclude the current directory
     if root != search_directory:
         for file in files:
-            if file.endswith('.blend') and root != exeption:
+            if file.endswith('.blend') and not root.startswith(exception):
                 file_path = os.path.join(root, file)
                 creation_date = datetime.fromtimestamp(os.path.getctime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
                 modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
-                print('Found:', len(file_details))
                 file_details.append({
                     'file_name': file,
                     'file_path': file_path,
@@ -28,7 +27,7 @@ for root, dirs, files in os.walk(search_directory):
                     'modification_date': modification_date
                 })
 
-print("Ecriture des details des fichiers dans un fichier JSON...")
+print("Ecriture des details des "+ str(len(file_details)) + " fichiers dans un fichier JSON...")
 
 # Save file details to a JSON file
 json_file = './output.json'

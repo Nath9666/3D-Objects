@@ -86,6 +86,13 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Rendu](./BarbieScene/render/)
     - ![image](BarbieScene/render/untitled.png)
 
+ ### BateauSNK : Default
+
+- [BateauSNK](./BateauSNK/Task.md) : 
+  - [Assets](./BateauSNK/assets/)
+  - [References](./BateauSNK/ref/)
+  - [Rendu](./BateauSNK/render/)
+
  ### BleuBague : `Finish`
 
 - [BleuBague](./BleuBague/Task.md) : 
@@ -112,13 +119,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
     - ![image](BreakClock/ref/original.jpg)
   - [Rendu](./BreakClock/render/)
     - ![image](BreakClock/render/untitled.png)
-
- ### cache_fluid_4b85f272 : Default
-
-- [cache_fluid_4b85f272](./cache_fluid_4b85f272/Task.md) : 
-  - [Assets](./cache_fluid_4b85f272/assets/)
-  - [References](./cache_fluid_4b85f272/ref/)
-  - [Rendu](./cache_fluid_4b85f272/render/)
 
  ### ColierPierre : `In progress`
 
@@ -170,6 +170,22 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
     - ![image](dinosaures/render/0009.png)
     - ![image](dinosaures/render/0010.png)
 
+ ### Dune : Default
+
+- [Dune](./Dune/Task.md) : 
+  - [Assets](./Dune/assets/)
+  - [References](./Dune/ref/)
+  - [Rendu](./Dune/render/)
+    - ![image](Dune/render/untitled.png)
+
+ ### Efrei3d : `Finish`
+
+- [Efrei3d](./Efrei3d/Task.md) : 
+  - [Assets](./Efrei3d/assets/)
+  - [References](./Efrei3d/ref/)
+  - [Rendu](./Efrei3d/render/)
+    - ![image](Efrei3d/render/untitled.png)
+
  ### Forest : `In progress`
 
 - [Forest](./Forest/Task.md) : 
@@ -177,7 +193,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./Forest/ref/)
     - ![image](Forest/ref/5dc28fe64474c8dcc2d4a88e09b8e0a6.jpg)
   - [Rendu](./Forest/render/)
-    - ![image](Forest/render/untitled.png)
     - ![image](Forest/render/untitled2.png)
 
  ### HeadRobot : `In progress`
@@ -212,6 +227,21 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./IRV/ref/)
   - [Rendu](./IRV/render/)
 
+ ### JinxGun : Default
+
+- [JinxGun](./JinxGun/Task.md) : 
+  - [Assets](./JinxGun/assets/)
+  - [References](./JinxGun/ref/)
+  - [Rendu](./JinxGun/render/)
+
+ ### Land2 : Default
+
+- [Land2](./Land2/Task.md) : 
+  - [Assets](./Land2/assets/)
+  - [References](./Land2/ref/)
+  - [Rendu](./Land2/render/)
+    - ![image](Land2/render/untitled.png)
+
  ### LandScape : `Finish`
 
 - [LandScape](./LandScape/Task.md) : 
@@ -219,7 +249,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./LandScape/ref/)
   - [Rendu](./LandScape/render/)
     - ![image](LandScape/render/Landscape_2.png)
-    - ![image](LandScape/render/untitled.png)
 
  ### MarcheurDespace : `In progress`
 
@@ -340,6 +369,14 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./Telecharger/ref/)
   - [Rendu](./Telecharger/render/)
 
+ ### TrexBatE : Default
+
+- [TrexBatE](./TrexBatE/Task.md) : 
+  - [Assets](./TrexBatE/assets/)
+  - [References](./TrexBatE/ref/)
+  - [Rendu](./TrexBatE/render/)
+    - ![image](TrexBatE/render/untitled.png)
+
  ### VaiseauScientif : `In progress`
 
 - [VaiseauScientif](./VaiseauScientif/Task.md) : 
@@ -362,7 +399,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Assets](./VideoInsta/assets/)
   - [References](./VideoInsta/ref/)
   - [Rendu](./VideoInsta/render/)
-    - ![image](VideoInsta/render/untitled.png)
     - ![image](VideoInsta/render/untitled2.png)
 
  ### YodaSpeach : `In progress`
