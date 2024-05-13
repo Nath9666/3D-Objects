@@ -1,7 +1,15 @@
-# Crane 
+# Crane
+
+Etat : `Finish`
 
 ## Description
 
+Rependre la musique et mettre un crane sur la musique
+
 ## Objectifs
 
- ## Taches
+S'entainer sur le geometry node
+
+FINSIH
+
+## Taches

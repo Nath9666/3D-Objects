@@ -1,35 +1,36 @@
 import os
-import psutil
 import json
-import time
+from datetime import datetime
 
-def afficher_disques():
-    disques = psutil.disk_partitions()
-    for disque in disques:
-        print(disque.device)
+# Define the directory to search (excluding the current directory)
+search_directory = 'G://'
+exception = "C://Users\\Nathan\\3D Objects"
 
-def trouver_fichiers_blend(repertoire, exeption=None):
-    fichiers_blend = []
-    for dossier, sous_dossiers, fichiers in os.walk(repertoire):
-        for fichier in fichiers:
-            if fichier.endswith(".blend") and dossier != exeption and os.path.islink(dossier):
-                chemin_fichier = os.path.join(dossier, fichier).replace("\\", "/")
-                date_creation = time.ctime(os.path.getctime(chemin_fichier))
-                date_modification = time.ctime(os.path.getmtime(chemin_fichier))
-                fichiers_blend.append({"nom": fichier, "chemin": chemin_fichier, "date_creation": date_creation, "date_modification": date_modification})
-    return fichiers_blend
+print('Searching for .blend files in the directory:', search_directory)
 
-if __name__ == "__main__":
-    afficher_disques()
-    print("Choisissez un disque : ")
-    rep = input()
-    print("Recherche des fichiers blend... dans le disque", rep)
-    # trouve les fichiers blend dans le repertoire exepter le dossier ou est lancer le programme
-    fichiers_blend = trouver_fichiers_blend(rep, os.getcwd())
+# List to store file details
+file_details = []
 
-    print("Ecriture des fichiers blend dans un fichier JSON...")
+# Traverse the directory tree
+for root, dirs, files in os.walk(search_directory):
+    # Exclude the current directory
+    if root != search_directory:
+        for file in files:
+            if file.endswith('.blend') and not root.startswith(exception):
+                file_path = os.path.join(root, file)
+                creation_date = datetime.fromtimestamp(os.path.getctime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
+                modification_date = datetime.fromtimestamp(os.path.getmtime(file_path)).strftime('%Y-%m-%d %H:%M:%S')
+                print(len(file_details)+1)
+                file_details.append({
+                    'file_name': file,
+                    'file_path': file_path,
+                    'creation_date': creation_date,
+                    'modification_date': modification_date
+                })
 
-    # ecrit dans un fichier JSON la liste des fichiers blend
-    with open("fichiers_blend.json", "w") as f:
-            json.dump(fichiers_blend, f)
-            f.write("\n")
+print("Ecriture des details des "+ str(len(file_details)) + " fichiers dans un fichier JSON...")
+
+# Save file details to a JSON file
+json_file = './output/output'+search_directory.replace("://","")+'.json'
+with open(json_file, 'w') as f:
+    json.dump(file_details, f, indent=4)

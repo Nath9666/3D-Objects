@@ -1,7 +1,13 @@
-# VideoInsta 
+# VideoInsta
+
+Etat : `Finish`
 
 ## Description
 
+faire une video pour instagram
+
 ## Objectifs
 
- ## Taches
+FINISH
+
+## Taches

@@ -1,6 +1,20 @@
 import os
 
-def find_specific_folders(start_path):
+def find_specific_folders(start_path)-> tuple:
+    """
+    Find specific folders in the given start_path directory.
+
+    Args:
+        start_path (str): The directory path to start the search from.
+
+    Returns:
+        tuple: A tuple containing the lists of found folders and the total number of files in the start_path directory.
+            The tuple contains the following elements:
+            - rendu (list): A list of paths to folders named 'render' that are not empty.
+            - ref (list): A list of paths to folders named 'ref' that are not empty.
+            - assets (list): A list of paths to folders named 'assets' that are not empty.
+            - nombre (int): The total number of files in the start_path directory.
+    """
     rendu = []
     ref = []
     assets = []
@@ -18,11 +32,20 @@ def find_specific_folders(start_path):
     return rendu, ref, assets, nombre
 
 def create_specific_folders(start_path):
+    """
+    Create specific folders and a Task.md file in each subdirectory of the given start_path.
+
+    Args:
+        start_path (str): The path of the directory where the subdirectories are located.
+
+    Returns:
+        None
+    """
     for name in os.listdir(start_path):
         if os.path.isdir(os.path.join(start_path, name)):
             for folder in ['ref', 'render', 'assets']:
                 os.makedirs(os.path.join(start_path, name, folder), exist_ok=True)
-            # cree un fichiers Task.md sans ecraser se qu'il y a dedans
+            # create a Task.md file without overwriting its contents
             if not os.path.exists(os.path.join(start_path, name, 'Task.md')):
                 with open(os.path.join(start_path, name, 'Task.md'), 'w') as f:
                     f.write(f"# {name} \n\n## Description\n\n## Objectifs\n\n ## Taches")
@@ -31,18 +54,67 @@ def create_specific_folders(start_path):
                     pass
 
 def delete_empty_folders(start_path):
+    """
+    Deletes empty folders recursively starting from the given start_path.
+
+    Args:
+        start_path (str): The path of the directory to start deleting empty folders from.
+
+    Returns:
+        None
+    """
     for root, dirs, files in os.walk(start_path, topdown=False):
         if not dirs and not files:
             os.rmdir(root)
 
-def empty_folder(start_path)-> bool:
+def empty_folder(start_path) -> bool:
+    """
+    Check if a folder is empty.
+
+    Args:
+        start_path (str): The path of the folder to check.
+
+    Returns:
+        bool: True if the folder is empty, False otherwise.
+    """
     for root, dirs, files in os.walk(start_path):
         if not dirs and not files:
             return True
     return False
 
+def find_step_project(start_path)-> dict:
+    """
+    Find the step of each project in the given start_path directory.
 
-def write_README(start_path):
+    Args:
+        start_path (str): The directory path to start the search from.
+
+    Returns:
+        dict: A dictionary containing the step of each project.
+    """
+    step_project = {}
+    for root, dirs, files in os.walk(start_path):
+        for file in files:
+            if file == 'Task.md':
+                with open(os.path.join(root, file), 'r') as f:
+                    content = f.readlines()
+                    step = content[2].strip()
+                    if step.startswith('Etat :'):
+                        step = step[len('Etat :'):].strip()
+                        step_project[os.path.basename(root)] = step
+    return step_project
+    
+
+def write_README(start_path: str, step_project: dict):
+    """
+    Updates the content of the README.md file located in the specified start_path directory.
+
+    Args:
+        start_path (str): The path to the directory containing the README.md file.
+
+    Returns:
+        None
+    """
     with open(os.path.join(start_path, 'README.md'), 'r') as f:
         content = f.read()
 
@@ -53,25 +125,31 @@ def write_README(start_path):
 
     for name in os.listdir(start_path):
         if os.path.isdir(os.path.join(start_path, name)):
-            new_content += f"\n ### {name} : \n"
+            try:
+                step_project[name]
+            except KeyError:
+                step_project[name] = 'Default'
+            new_content += f"\n ### {name} : {step_project[name]}\n"
             new_content += f"\n- [{name}](./{name}/Task.md) : \n"
 
-            new_content += f"  - #### [Assets](./{name}/assets/)\n"
+            new_content += f"  - [Assets](./{name}/assets/)\n"
 
-            new_content += f"  - #### [References](./{name}/ref/)\n"
+            new_content += f"  - [References](./{name}/ref/)\n"
             if os.path.join(start_path, name) in ref:
-                print('Ref :', name)
+                #? print('Ref :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'ref')):
                     if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
                         new_content += f"    - ![image]({name}/ref/{img})\n"
                         
-            new_content += f"  - #### [Rendu](./{name}/render/)\n"
+            new_content += f"  - [Rendu](./{name}/render/)\n"
             image_rendu = []
+            image_count = 0
             if os.path.join(start_path, name) in rendu:
-                print('Rendu :', name)
+                #? print('Rendu :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'render')):
-                    if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
+                    if (img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg')) and image_count < 10:
                         new_content += f"    - ![image]({name}/render/{img})\n"
+                        image_count += 1
 
                         
 
@@ -80,17 +158,10 @@ def write_README(start_path):
     with open(os.path.join(start_path, 'README.md'), 'w') as f:
         f.write(new_content)
 
-if __name__ == "__main__":
-    rendu, ref, assets, nombre = find_specific_folders('./')
-    print('Nombre de dossiers parcourus :', nombre)
-    for i in rendu:
-        print('Dossier rendu :', i)
-    for i in ref:
-        print('Dossier ref :', i)
-    for i in assets:
-        print('Dossier assets :', i)
+rendu, ref, assets, nombre = find_specific_folders('./')
+print('Nombre de dossiers parcourus :', nombre)
 
-    create_specific_folders('./')
-    write_README('./')
-    #delete_empty_folders('./')
+create_specific_folders('./')
+write_README('./', find_step_project('./'))
+#delete_empty_folders('./')
 

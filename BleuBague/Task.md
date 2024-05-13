@@ -1,7 +1,15 @@
-# BleuBague 
+# BleuBague
+
+Etat : `Finish`
 
 ## Description
 
+Reprendre l'image et la refaire en image a ma sauce
+
 ## Objectifs
 
- ## Taches
+Travailler les shader et le texture pain
+
+FINSIH
+
+## Taches
