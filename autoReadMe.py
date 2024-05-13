@@ -158,10 +158,10 @@ def write_README(start_path: str, step_project: dict):
     with open(os.path.join(start_path, 'README.md'), 'w') as f:
         f.write(new_content)
 
-rendu, ref, assets, nombre = find_specific_folders('./')
-print('Nombre de dossiers parcourus :', nombre)
+if __name__ == '__main__':
+    rendu, ref, assets, nombre = find_specific_folders('./')
+    print('Nombre de dossiers parcourus :', nombre)
 
-create_specific_folders('./')
-write_README('./', find_step_project('./'))
-#delete_empty_folders('./')
-
+    create_specific_folders('./')
+    write_README('./', find_step_project('./'))
+    #delete_empty_folders('./')
