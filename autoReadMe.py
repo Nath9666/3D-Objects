@@ -115,6 +115,8 @@ def write_README(start_path: str, step_project: dict):
     Returns:
         None
     """
+    extension_img = ['.png', '.jpg', '.jpeg', '.avif', '.webp', '.gif']
+
     with open(os.path.join(start_path, 'README.md'), 'r') as f:
         content = f.read()
 
@@ -138,8 +140,10 @@ def write_README(start_path: str, step_project: dict):
             if os.path.join(start_path, name) in ref:
                 #? print('Ref :', name)
                 for img in os.listdir(os.path.join(start_path, name, 'ref')):
-                    if img.endswith('.png') or img.endswith('.jpg') or img.endswith('.jpeg'):
-                        new_content += f"    - ![image]({name}/ref/{img})\n"
+                    for ext in extension_img:
+                        if img.endswith(ext):
+                            new_content += f"    - ![image]({name}/ref/{img})\n"
+                            break
                         
             new_content += f"  - [Rendu](./{name}/render/)\n"
             image_rendu = []
