@@ -93,6 +93,21 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./BateauSNK/ref/)
   - [Rendu](./BateauSNK/render/)
 
+ ### BatimentCartoon : Default
+
+- [BatimentCartoon](./BatimentCartoon/Task.md) : 
+  - [Assets](./BatimentCartoon/assets/)
+  - [References](./BatimentCartoon/ref/)
+    - ![image](BatimentCartoon/ref/1715063279620.jpg)
+  - [Rendu](./BatimentCartoon/render/)
+
+ ### BlenderFiles : Default
+
+- [BlenderFiles](./BlenderFiles/Task.md) : 
+  - [Assets](./BlenderFiles/assets/)
+  - [References](./BlenderFiles/ref/)
+  - [Rendu](./BlenderFiles/render/)
+
  ### BleuBague : `Finish`
 
 - [BleuBague](./BleuBague/Task.md) : 
@@ -177,14 +192,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./Dune/ref/)
   - [Rendu](./Dune/render/)
     - ![image](Dune/render/untitled.png)
-
- ### Efrei3d : `Finish`
-
-- [Efrei3d](./Efrei3d/Task.md) : 
-  - [Assets](./Efrei3d/assets/)
-  - [References](./Efrei3d/ref/)
-  - [Rendu](./Efrei3d/render/)
-    - ![image](Efrei3d/render/untitled.png)
 
  ### Forest : `In progress`
 
@@ -411,6 +418,13 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Assets](./vda/assets/)
   - [References](./vda/ref/)
   - [Rendu](./vda/render/)
+
+ ### Video : Default
+
+- [Video](./Video/Task.md) : 
+  - [Assets](./Video/assets/)
+  - [References](./Video/ref/)
+  - [Rendu](./Video/render/)
 
  ### VideoInsta : `Finish`
 
