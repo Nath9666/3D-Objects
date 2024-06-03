@@ -103,7 +103,6 @@ def find_step_project(start_path)-> dict:
                         step = step[len('Etat :'):].strip()
                         step_project[os.path.basename(root)] = step
     return step_project
-    
 
 def write_README(start_path: str, step_project: dict):
     """

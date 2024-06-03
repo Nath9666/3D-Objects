@@ -31,6 +31,6 @@ for root, dirs, files in os.walk(search_directory):
 print("Ecriture des details des "+ str(len(file_details)) + " fichiers dans un fichier JSON...")
 
 # Save file details to a JSON file
-json_file = './output/output2'+search_directory.replace("://","")+'.json'
+json_file = './_output/output2'+search_directory.replace("://","")+'.json'
 with open(json_file, 'w') as f:
     json.dump(file_details, f, indent=4)

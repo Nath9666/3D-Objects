@@ -296,13 +296,6 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Rendu](./NewYorkStreet/render/)
     - ![image](NewYorkStreet/render/untitled.png)
 
- ### output : Default
-
-- [output](./output/Task.md) : 
-  - [Assets](./output/assets/)
-  - [References](./output/ref/)
-  - [Rendu](./output/render/)
-
  ### PainSentence : `Finish`
 
 - [PainSentence](./PainSentence/Task.md) : 
@@ -319,6 +312,13 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
     - ![image](PendentifEpee/ref/ref.jpg)
   - [Rendu](./PendentifEpee/render/)
     - ![image](PendentifEpee/render/untitled.png)
+
+ ### PieceMachineACoudre : Default
+
+- [PieceMachineACoudre](./PieceMachineACoudre/Task.md) : 
+  - [Assets](./PieceMachineACoudre/assets/)
+  - [References](./PieceMachineACoudre/ref/)
+  - [Rendu](./PieceMachineACoudre/render/)
 
  ### PlaquePerforee : `Start`
 
@@ -441,5 +441,12 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./YodaSpeach/ref/)
   - [Rendu](./YodaSpeach/render/)
     - ![image](YodaSpeach/render/untitled.png)
+
+ ### _output : Default
+
+- [_output](./_output/Task.md) : 
+  - [Assets](./_output/assets/)
+  - [References](./_output/ref/)
+  - [Rendu](./_output/render/)
 
 -- Fin des projets
