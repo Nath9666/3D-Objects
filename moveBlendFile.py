@@ -24,7 +24,7 @@ def copier_fichiers(fichier_json):
         fichiers = json.load(f)
 
     for fichier in fichiers:
-        chemin = fichier['chemin']
+        chemin = fichier['file_path']
         if exist_file(chemin):
             nom_fichier = os.path.basename(chemin)
             nom_base, extension = os.path.splitext(nom_fichier)
