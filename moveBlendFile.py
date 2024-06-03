@@ -35,4 +35,16 @@ def copier_fichiers(fichier_json):
             shutil.copy2(chemin, os.getcwd())
 
 if __name__ == "__main__":
-    copier_fichiers(PATH + 'outputC.json')
+    fichier_json = PATH + 'outputC.json'
+    with open(fichier_json, 'r') as f:
+        fichiers = json.load(f)
+
+    for fichier in fichiers:
+        chemin = fichier['file_path']
+        chemin = chemin.replace('\\', '/').replace('//', '/')
+        try:
+            if chemin.startswith(os.getcwd()):
+                print(f'Le fichier {chemin} est déjà dans le répertoire courant.')
+        except:
+            print(f'Le fichier {chemin} n\'existe pas.')
+    #copier_fichiers(PATH + 'outputC.json')
