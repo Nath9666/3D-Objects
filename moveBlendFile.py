@@ -39,17 +39,20 @@ def copier_fichiers(fichier_json):
     for fichier in fichiers:
         chemin = fichier['file_path']
         name = fichier['file_name']
-        if not exist_current_folder(chemin):
-            chemin = chemin.replace('\\', '/').replace('//', '/')
-            if exist_file(chemin):
-                nom_fichier = os.path.basename(chemin)
-                nom_base, extension = os.path.splitext(nom_fichier)
-                nouveau_chemin = os.path.join(os.getcwd(), nom_base + '2' + extension)
-                shutil.copy2(chemin, nouveau_chemin)
+        try:
+            if not exist_current_folder(chemin):
+                chemin = chemin.replace('\\', '/').replace('//', '/')
+                if exist_file(chemin):
+                    nom_fichier = os.path.basename(chemin)
+                    nom_base, extension = os.path.splitext(nom_fichier)
+                    nouveau_chemin = os.path.join(os.getcwd(), nom_base + '2' + extension)
+                    shutil.copy2(chemin, nouveau_chemin)
+                else:
+                    shutil.copy2(chemin, os.getcwd())
             else:
-                shutil.copy2(chemin, os.getcwd())
-        else:
-            print(f'Le fichier {name} existe déjà dans le dossier courant.')
+                print(f'Le fichier {name} existe déjà dans le dossier courant.')
+        except Exception as e:
+            print(f'Erreur sur le fichier {name}')
 
 if __name__ == "__main__":
     fichier_json = PATH + 'output2C.json'
