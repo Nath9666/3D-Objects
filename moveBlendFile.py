@@ -16,6 +16,19 @@ def exist_file(file):
     """
     return os.path.exists(file)
 
+def exist_current_folder(file, curent_folder=os.getcwd()):
+    """
+    Check if the file exist in the current folder.
+
+    Args:
+        file (str): The path of the file to check.
+        current_folder (str): The path of the current folder.
+
+    Returns:
+        bool: True if the file exists in the current folder, False otherwise.
+    """
+    return os.path.exists(os.path.join(curent_folder, file))
+
 def copier_fichiers(fichier_json):
     if not exist_file(fichier_json):
         print(f'Le fichier {fichier_json} n\'existe pas.')
@@ -25,26 +38,19 @@ def copier_fichiers(fichier_json):
 
     for fichier in fichiers:
         chemin = fichier['file_path']
-        chemin = chemin.replace('\\', '/').replace('//', '/')
-        if exist_file(chemin):
-            nom_fichier = os.path.basename(chemin)
-            nom_base, extension = os.path.splitext(nom_fichier)
-            nouveau_chemin = os.path.join(os.getcwd(), nom_base + '2' + extension)
-            shutil.copy2(chemin, nouveau_chemin)
+        name = fichier['file_name']
+        if not exist_current_folder(chemin):
+            chemin = chemin.replace('\\', '/').replace('//', '/')
+            if exist_file(chemin):
+                nom_fichier = os.path.basename(chemin)
+                nom_base, extension = os.path.splitext(nom_fichier)
+                nouveau_chemin = os.path.join(os.getcwd(), nom_base + '2' + extension)
+                shutil.copy2(chemin, nouveau_chemin)
+            else:
+                shutil.copy2(chemin, os.getcwd())
         else:
-            shutil.copy2(chemin, os.getcwd())
+            print(f'Le fichier {name} existe déjà dans le dossier courant.')
 
 if __name__ == "__main__":
-    fichier_json = PATH + 'outputC.json'
-    with open(fichier_json, 'r') as f:
-        fichiers = json.load(f)
-
-    for fichier in fichiers:
-        chemin = fichier['file_path']
-        chemin = chemin.replace('\\', '/').replace('//', '/')
-        try:
-            if chemin.startswith(os.getcwd()):
-                print(f'Le fichier {chemin} est déjà dans le répertoire courant.')
-        except:
-            print(f'Le fichier {chemin} n\'existe pas.')
-    #copier_fichiers(PATH + 'outputC.json')
+    fichier_json = PATH + 'output2C.json'
+    copier_fichiers(fichier_json)
