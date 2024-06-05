@@ -27,7 +27,14 @@ def exist_current_folder(file, curent_folder=os.getcwd()):
     Returns:
         bool: True if the file exists in the current folder, False otherwise.
     """
-    return os.path.exists(os.path.join(curent_folder, file))
+    if not exist_file(file):
+        return False
+    if file == curent_folder:
+        return True
+    if file.startswith(curent_folder):
+        return True
+    else:
+        return False
 
 def copier_fichiers(fichier_json):
     if not exist_file(fichier_json):
@@ -41,7 +48,7 @@ def copier_fichiers(fichier_json):
         name = fichier['file_name']
         try:
             if not exist_current_folder(chemin):
-                chemin = chemin.replace('\\', '/').replace('//', '/')
+                chemin = chemin.replace('//', '/').replace('//', '/')
                 if exist_file(chemin):
                     nom_fichier = os.path.basename(chemin)
                     nom_base, extension = os.path.splitext(nom_fichier)
@@ -52,7 +59,7 @@ def copier_fichiers(fichier_json):
             else:
                 print(f'Le fichier {name} existe déjà dans le dossier courant.')
         except Exception as e:
-            print(f'Erreur sur le fichier {name}')
+            print(f'Erreur lors de la copie du fichier {name} : {e}')
 
 if __name__ == "__main__":
     fichier_json = PATH + 'output2C.json'
