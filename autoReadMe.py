@@ -46,9 +46,19 @@ def create_specific_folders(start_path):
             for folder in ['ref', 'render', 'assets']:
                 os.makedirs(os.path.join(start_path, name, folder), exist_ok=True)
             # create a Task.md file without overwriting its contents
+            template_path = './TaskTemplate.md'  # Remplacez par le chemin vers votre fichier 'TaskTemplate'
+            
             if not os.path.exists(os.path.join(start_path, name, 'Task.md')):
-                with open(os.path.join(start_path, name, 'Task.md'), 'w') as f:
-                    f.write(f"# {name} \n\n## Description\n\n## Objectifs\n\n ## Taches")
+                # Lire le contenu du fichier 'TaskTemplate'
+                with open(template_path, 'r') as template_file:
+                    template_content = template_file.read()
+            
+                # Remplacer la première ligne par le nom
+                template_content = template_content.replace('ProjectName', f'{name}', 1)
+            
+                # Écrire le contenu modifié dans le nouveau fichier 'Task.md'
+                with open(os.path.join(start_path, name, 'Task.md'), 'w') as task_file:
+                    task_file.write(template_content)
             else:
                 with open(os.path.join(start_path, name, 'Task.md'), 'a') as f:
                     pass

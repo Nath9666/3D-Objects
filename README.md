@@ -168,22 +168,29 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Rendu](./DebarquementNormandieJeu/render/)
     - ![image](DebarquementNormandieJeu/render/untitled.png)
 
- ### dinosaures : `Finish`
+ ### DecapsulerComuniste : `Start`
 
-- [dinosaures](./dinosaures/Task.md) : 
-  - [Assets](./dinosaures/assets/)
-  - [References](./dinosaures/ref/)
-  - [Rendu](./dinosaures/render/)
-    - ![image](dinosaures/render/0001.png)
-    - ![image](dinosaures/render/0002.png)
-    - ![image](dinosaures/render/0003.png)
-    - ![image](dinosaures/render/0004.png)
-    - ![image](dinosaures/render/0005.png)
-    - ![image](dinosaures/render/0006.png)
-    - ![image](dinosaures/render/0007.png)
-    - ![image](dinosaures/render/0008.png)
-    - ![image](dinosaures/render/0009.png)
-    - ![image](dinosaures/render/0010.png)
+- [DecapsulerComuniste](./DecapsulerComuniste/Task.md) : 
+  - [Assets](./DecapsulerComuniste/assets/)
+  - [References](./DecapsulerComuniste/ref/)
+  - [Rendu](./DecapsulerComuniste/render/)
+
+ ### Dinosaures : `Finish`
+
+- [Dinosaures](./Dinosaures/Task.md) : 
+  - [Assets](./Dinosaures/assets/)
+  - [References](./Dinosaures/ref/)
+  - [Rendu](./Dinosaures/render/)
+    - ![image](Dinosaures/render/0001.png)
+    - ![image](Dinosaures/render/0002.png)
+    - ![image](Dinosaures/render/0003.png)
+    - ![image](Dinosaures/render/0004.png)
+    - ![image](Dinosaures/render/0005.png)
+    - ![image](Dinosaures/render/0006.png)
+    - ![image](Dinosaures/render/0007.png)
+    - ![image](Dinosaures/render/0008.png)
+    - ![image](Dinosaures/render/0009.png)
+    - ![image](Dinosaures/render/0010.png)
 
  ### Dune : Default
 
@@ -258,6 +265,20 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [References](./LandScape/ref/)
   - [Rendu](./LandScape/render/)
     - ![image](LandScape/render/Landscape_2.png)
+
+ ### LeverPlaque : `Start`
+
+- [LeverPlaque](./LeverPlaque/Task.md) : 
+  - [Assets](./LeverPlaque/assets/)
+  - [References](./LeverPlaque/ref/)
+  - [Rendu](./LeverPlaque/render/)
+
+ ### LoupSetTable : `In progress`
+
+- [LoupSetTable](./LoupSetTable/Task.md) : 
+  - [Assets](./LoupSetTable/assets/)
+  - [References](./LoupSetTable/ref/)
+  - [Rendu](./LoupSetTable/render/)
 
  ### MarcheurDespace : `In progress`
 
@@ -448,5 +469,12 @@ Ce projet est sous licence MIT. Voir le fichier [Licences](./LICENCE.md) pour pl
   - [Assets](./_output/assets/)
   - [References](./_output/ref/)
   - [Rendu](./_output/render/)
+
+ ### __pycache__ : Default
+
+- [__pycache__](./__pycache__/Task.md) : 
+  - [Assets](./__pycache__/assets/)
+  - [References](./__pycache__/ref/)
+  - [Rendu](./__pycache__/render/)
 
 -- Fin des projets
